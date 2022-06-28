@@ -1,0 +1,11 @@
+#not-found-container {
+    height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column
+}
+
+#not-found-container > h1 {
+    font-size: 14em
+}
