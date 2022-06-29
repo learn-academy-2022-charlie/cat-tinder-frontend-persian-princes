@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer.js'
 import Home from './pages/Home/Home.js'
 import CatIndex from './pages/CatIndex/CatIndex.js'
 import CatShow from './pages/CatShow/CatShow.js'
-import CatNew from './pages/CatNew.js'
+import CatNew from './pages/CatNew/CatNew.js'
 import CatEdit from './pages/CatEdit.js'
 import NotFound from './pages/NotFound/NotFound.js'
 import mockCats from './mockCats'
@@ -16,6 +16,10 @@ class App extends Component {
     this.state = {
       listOfCats: mockCats
     }
+  }
+  
+  createCat = (cat) => {
+    console.log(cat)
   }
 
   render() {
@@ -35,12 +39,17 @@ class App extends Component {
               return <CatShow cat={cat} />
             }}
             />
-            <Route path="/catnew" component={CatNew} />
+            <Route
+              path="/catnew"
+              render={(props) => <CatNew createCat={this.createCat} />}
+            />
             <Route path="/catedit" component={CatEdit} />
             <Route component={NotFound}/>
           </Switch>
           <ul>
+            <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/catindex">Cat Index</NavLink></li>
+            <li><NavLink to="/catnew">New Cat</NavLink></li>
           </ul>
           <Footer />
         </Router>
