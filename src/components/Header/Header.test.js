@@ -10,7 +10,8 @@ describe("When Header renders", () => {
         headerRender = shallow(<Header />)
     })
     it("will display a title", () => {
-        const headerTitleRender = headerRender.find("h1").text()
+        const headerTitleRender = headerRender.find('[className="header-title"]').text()
         expect(headerTitleRender).toEqual("Cat Tinder")
     })
+    
 })
