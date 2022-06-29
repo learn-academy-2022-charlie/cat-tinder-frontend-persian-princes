@@ -2,12 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background: rgb(48,98,172);
     background: linear-gradient(90deg, rgba(48,98,172,1) 0%, rgba(68,237,184,1) 51%, rgba(0,251,248,1) 100%);
     height: 8em;
 }
 
-#footer-container > ul {
+ul {
     list-style-type: none;
     text-align: center;
 }

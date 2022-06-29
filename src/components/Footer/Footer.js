@@ -11,7 +11,7 @@ class Footer extends Component {
                     <li><a href=''>Social Media Icon</a></li>
                     <li><a href=''>Social Media Icon</a></li>
                 </ul>
-                <p>Copyright Logan and Jenner</p>
+                <p>© Copyright Logan and Jenner</p>
                 <ul className='social-media'>
                     <li>Jenner</li>
                     <li><a href=''>Social Media Icon</a></li>

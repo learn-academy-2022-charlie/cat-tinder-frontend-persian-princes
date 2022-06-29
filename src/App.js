@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './components/Header/Header.js'
 import Footer from './components/Footer/Footer.js'
-import Home from './components/Home/Home.js'
+import Home from './pages/Home/Home.js'
 import CatIndex from './pages/CatIndex.js'
 import CatShow from './pages/CatShow.js'
 import CatNew from './pages/CatNew.js'
@@ -21,9 +21,9 @@ class App extends Component {
   render() {
     console.log(this.state.cats)
     return (
-      <div>
-        <Header />
+      <>
         <Router>
+          <Header />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/catindex" component={CatIndex} />
@@ -32,10 +32,10 @@ class App extends Component {
             <Route path="/catedit" component={CatEdit} />
             <Route component={NotFound}/>
           </Switch>
+          <Footer />
         </Router>
-        <Footer />
-      </div>
-    );
+      </>
+    )
   }
 }
 
