@@ -21,21 +21,21 @@ class App extends Component {
   render() {
     console.log(this.state.cats)
     return (
-      <div>
+      <>
+      <Router>
         <Header />
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/catindex" component={CatIndex} />
-            <Route path="/catshow" component={CatShow} />
-            <Route path="/catnew" component={CatNew} />
-            <Route path="/catedit" component={CatEdit} />
-            <Route component={NotFound}/>
-          </Switch>
-        </Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/catindex" component={CatIndex} />
+          <Route path="/catshow" component={CatShow} />
+          <Route path="/catnew" component={CatNew} />
+          <Route path="/catedit" component={CatEdit} />
+          <Route component={NotFound}/>
+        </Switch>
         <Footer />
-      </div>
-    );
+      </Router>
+      </>
+    )
   }
 }
 
