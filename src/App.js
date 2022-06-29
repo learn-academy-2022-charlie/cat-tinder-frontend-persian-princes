@@ -30,7 +30,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/catindex"
-            render={(props) => <CatIndex cats={this.state.listOfCats} />}
+            render={() => <CatIndex cats={this.state.listOfCats} />}
             />
             <Route path="/catshow/:id"
             render={(props) => {
@@ -41,7 +41,7 @@ class App extends Component {
             />
             <Route
               path="/catnew"
-              render={(props) => <CatNew createCat={this.createCat} />}
+              render={() => <CatNew createCat={this.createCat} />}
             />
             <Route path="/catedit" component={CatEdit} />
             <Route component={NotFound}/>

@@ -30,6 +30,9 @@ class CatNew extends Component {
     }
 
     render() {
+        if (this.state.submitted) {
+            return (<Redirect to={'/catindex'} />);
+        }
         return (
             <>
                 <h1>Create your card!</h1>
@@ -84,7 +87,7 @@ class CatNew extends Component {
                     </FormGroup>
                         <Button onClick={this.handleSubmit}>
                             Submit
-                        </Button>       
+                        </Button>
                 </Form>
             </>
         )
