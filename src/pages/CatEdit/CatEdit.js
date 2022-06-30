@@ -34,8 +34,9 @@ class CatEdit extends Component {
     }
 
     render() {
+        const { cat } = this.props
         if (this.state.submitted) {
-            return (<Redirect to={'/catindex'} />);
+            return (<Redirect to={`/catshow/${cat.id}`} />);
         }
         return (
             <>
