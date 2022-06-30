@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -20,6 +21,7 @@ class Show extends Component {
                         </CardBody>
                     </Card>
                 }
+                <NavLink to={`/catedit/${cat.id}`}>Update Cat</NavLink>
             </div>
         );
     }

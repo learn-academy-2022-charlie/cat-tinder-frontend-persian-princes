@@ -6,7 +6,7 @@ import Home from './pages/Home/Home.js'
 import CatIndex from './pages/CatIndex/CatIndex.js'
 import CatShow from './pages/CatShow/CatShow.js'
 import CatNew from './pages/CatNew/CatNew.js'
-import CatEdit from './pages/CatEdit.js'
+import CatEdit from './pages/CatEdit/CatEdit.js'
 import NotFound from './pages/NotFound/NotFound.js'
 import mockCats from './mockCats'
 
@@ -19,6 +19,10 @@ class App extends Component {
   }
   
   createCat = (cat) => {
+    console.log(cat)
+  }
+
+  editCat = (cat) => {
     console.log(cat)
   }
 
@@ -43,7 +47,13 @@ class App extends Component {
               path="/catnew"
               render={() => <CatNew createCat={this.createCat} />}
             />
-            <Route path="/catedit" component={CatEdit} />
+            <Route path="/catedit/:id"
+            render={(props) => {
+              let id = props.match.params.id
+              let cat = this.state.listOfCats.find(catObject => catObject.id == id)
+              return <CatEdit cat={cat} editCat={this.editCat}/>
+            }}
+            />
             <Route component={NotFound}/>
           </Switch>
           <ul>
