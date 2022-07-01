@@ -29,7 +29,7 @@ class CatEdit extends Component {
     }
 
     handleSubmit = () => {
-        this.props.editCat(this.state.updatedCat)
+        this.props.editCat(this.state.updatedCat, this.props.cat.id)
         this.setState({submitted: true})
     }
 

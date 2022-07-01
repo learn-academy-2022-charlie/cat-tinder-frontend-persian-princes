@@ -14,16 +14,57 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      listOfCats: mockCats
+      listOfCats: []
     }
+  }
+
+  componentDidMount = () => {
+    this.readCat()
+  }
+
+  readCat = () => {
+    fetch("http://localhost:3000/cats")
+    .then(response => response.json())
+    .then(catsArray => this.setState({listOfCats: catsArray}))
+    .catch(errors => console.log("Cat read errors:", errors))
   }
   
   createCat = (cat) => {
-    console.log(cat)
+    fetch("http://localhost:3000/cats", {
+    body: JSON.stringify(cat),
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method: "POST"
+    })
+    .then(response => response.json())
+    .then(payload => this.readCat())
+    .catch(errors => console.log("Cat create errors:", errors))
   }
 
-  editCat = (cat) => {
-    console.log(cat)
+  editCat = (cat, id) => {
+    fetch(`http://localhost:3000/cats/${id}`, {
+    body: JSON.stringify(cat),
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method: "PATCH"
+    })
+    .then(response => response.json())
+    .then(payload => this.readCat())
+    .catch(errors => console.log("Cat create errors:", errors))
+  }
+
+  deleteCat = (id) => {
+    fetch(`http://localhost:3000/cats/${id}`, {
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method: "DELETE"
+    })
+    .then(response => response.json())
+    .then(payload => this.readCat())
+    .catch(errors => console.log("delete errors:", errors))
   }
 
   render() {
@@ -40,7 +81,7 @@ class App extends Component {
             render={(props) => {
               let id = props.match.params.id
               let cat = this.state.listOfCats.find(catObject => catObject.id == id)
-              return <CatShow cat={cat} />
+              return <CatShow cat={cat} deleteCat={this.deleteCat}/>
             }}
             />
             <Route
