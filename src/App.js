@@ -7,8 +7,8 @@ import CatIndex from './pages/CatIndex/CatIndex.js'
 import CatShow from './pages/CatShow/CatShow.js'
 import CatNew from './pages/CatNew/CatNew.js'
 import CatEdit from './pages/CatEdit/CatEdit.js'
+import SwipeCats from './pages/SwipeCats.js'
 import NotFound from './pages/NotFound/NotFound.js'
-import mockCats from './mockCats'
 
 class App extends Component {
   constructor(props){
@@ -68,6 +68,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.listOfCats)
     return (
       <>
         <Router>
@@ -93,6 +94,11 @@ class App extends Component {
               let id = props.match.params.id
               let cat = this.state.listOfCats.find(catObject => catObject.id == id)
               return <CatEdit cat={cat} editCat={this.editCat}/>
+            }}
+            />
+            <Route path="/deck"
+            render={(props) => {
+              return <SwipeCats cats={this.state.listOfCats}/>
             }}
             />
             <Route component={NotFound}/>
