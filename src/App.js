@@ -103,11 +103,6 @@ class App extends Component {
             />
             <Route component={NotFound}/>
           </Switch>
-          <ul>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/catindex">Cat Index</NavLink></li>
-            <li><NavLink to="/catnew">New Cat</NavLink></li>
-          </ul>
           <Footer />
         </Router>
       </>
