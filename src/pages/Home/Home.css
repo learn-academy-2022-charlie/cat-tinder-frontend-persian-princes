@@ -35,14 +35,12 @@ body {
 }
 
 #message-container {
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 20px;
 	font-weight: normal;
-    max-width: 450px;
-	margin: 50px auto;
+    width: 20vw;
+	margin: 18vh 0;
     display: flex;
     flex-direction: column;
-    background-color: var(--page-background);
 }
 
 p {
