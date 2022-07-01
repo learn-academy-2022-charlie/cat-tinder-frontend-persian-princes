@@ -23,6 +23,10 @@
     padding: 0;
 }
 
+#header-link:hover {
+    text-decoration: none;
+}
+
 .header-link {
     text-decoration: none;
     color: white;

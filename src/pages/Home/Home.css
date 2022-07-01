@@ -1,9 +1,36 @@
 #home-container {
-    height: 100vh;
-    margin: auto;
-    text-align: center;
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
+    background-color: hsla(0, 0%, 0%, 0.35);
+    height: 92em;
 }
 
-#home-cat {
-    height: 20em;
+body {
+    background: url(../../assets/cats.webp);
+    background-position: 0;
+    background-size: 100%;
 }
+
+#home-title {
+    font-size: 12em;
+    overflow: hidden;
+    color: white;
+    margin: 5% 0;
+}
+
+#home-button {
+    background: linear-gradient(48deg, rgba(255,0,69,1) 0%, rgba(74,0,184,1) 100%);
+    height: 1em;
+    width: 15%;
+    border-radius: 25px;
+    padding: 1.4%;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.4em;
+}
+
