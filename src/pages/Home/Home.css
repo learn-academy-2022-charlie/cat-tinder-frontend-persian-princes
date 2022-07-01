@@ -34,3 +34,35 @@ body {
     font-size: 1.4em;
 }
 
+#message-container {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+    max-width: 450px;
+	margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--page-background);
+}
+
+p {
+    max-width: 255px;
+    word-wrap: break-word;
+    margin-bottom: 12px;
+    line-height: 24px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.send {
+	color: white;
+	background: #0B93F6;
+	align-self: flex-end;
+}
+
+.receive {
+	background: #E5E5EA;
+    color: black;
+    align-self: flex-start;
+}
