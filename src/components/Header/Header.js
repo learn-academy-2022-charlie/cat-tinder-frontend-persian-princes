@@ -13,7 +13,7 @@ class Header extends Component {
                     <NavLink className="header-link" to="/catindex">
                         <li>See All Cats</li>
                     </NavLink>
-                    <NavLink className="header-link" to="/">
+                    <NavLink id="header-link" className="header-link" to="/">
                         <h1 className="header-title">Cat Tinder</h1>
                     </NavLink>
                     <NavLink className="header-link" to="/catnew">  

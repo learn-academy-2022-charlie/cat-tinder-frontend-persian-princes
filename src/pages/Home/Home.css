@@ -1,9 +1,66 @@
 #home-container {
-    height: 100vh;
-    margin: auto;
-    text-align: center;
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
+    background-color: hsla(0, 0%, 0%, 0.35);
+    height: 92em;
 }
 
-#home-cat {
-    height: 20em;
+body {
+    background: url(../../assets/cats.webp);
+    background-position: 0;
+    background-size: 100%;
+}
+
+#home-title {
+    font-size: 12em;
+    overflow: hidden;
+    color: white;
+    margin: 5% 0;
+}
+
+#home-button {
+    background: linear-gradient(48deg, rgba(255,0,69,1) 0%, rgba(74,0,184,1) 100%);
+    height: 1em;
+    width: 15%;
+    border-radius: 25px;
+    padding: 1.4%;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.4em;
+}
+
+#message-container {
+	font-size: 20px;
+	font-weight: normal;
+    width: 20vw;
+	margin: 18vh 0;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    max-width: 255px;
+    word-wrap: break-word;
+    margin-bottom: 12px;
+    line-height: 24px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.send {
+	color: white;
+	background: #0B93F6;
+	align-self: flex-end;
+}
+
+.receive {
+	background: #E5E5EA;
+    color: black;
+    align-self: flex-start;
 }
