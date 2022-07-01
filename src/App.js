@@ -9,6 +9,7 @@ import CatNew from './pages/CatNew/CatNew.js'
 import CatEdit from './pages/CatEdit/CatEdit.js'
 import NotFound from './pages/NotFound/NotFound.js'
 import mockCats from './mockCats'
+import './App.css'
 
 class App extends Component {
   constructor(props){
@@ -97,11 +98,6 @@ class App extends Component {
             />
             <Route component={NotFound}/>
           </Switch>
-          <ul>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/catindex">Cat Index</NavLink></li>
-            <li><NavLink to="/catnew">New Cat</NavLink></li>
-          </ul>
           <Footer />
         </Router>
       </>
