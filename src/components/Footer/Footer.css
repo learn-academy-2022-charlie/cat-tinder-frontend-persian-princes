@@ -22,3 +22,8 @@ ul {
     color: white;
     text-decoration: underline;
 }
+
+#cr {
+    justify-content: center;
+    display: flex;
+}
