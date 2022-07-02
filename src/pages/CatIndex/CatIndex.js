@@ -11,7 +11,7 @@ import { Card, CardImg, CardText, CardBody,
                     {cats && 
                         cats.map((cat, index) => {
                         return <Card key={index}>
-                            <CardImg top width="100%" src={cat.image} alt="Card image cap" />
+                            {/* <CardImg src={cat.image} alt="Card image cap" /> */}
                             <CardBody>
                             <CardTitle>{cat.name}</CardTitle>
                             <CardSubtitle>{cat.age}</CardSubtitle>

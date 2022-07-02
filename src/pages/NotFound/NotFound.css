@@ -1,11 +1,13 @@
 #not-found-container {
-    height: 75vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    flex-direction: column
+    flex-direction: column;
+    background-color: hsl(0, 0%, 0%);
 }
 
 #not-found-container > h1 {
-    font-size: 12em
+    font-size: 12em;
+    color: white;
 }

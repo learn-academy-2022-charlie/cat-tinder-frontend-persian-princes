@@ -34,6 +34,7 @@ body {
     align-items: center;
     display: flex;
     font-size: 1.4em;
+    text-decoration: none;
 }
 
 #message-container {
