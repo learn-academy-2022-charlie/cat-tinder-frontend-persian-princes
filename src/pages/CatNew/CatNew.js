@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap'
 import { Redirect } from 'react-router-dom'
+import './CatNew.css'
 
 class CatNew extends Component {
     constructor(props){
@@ -34,8 +35,11 @@ class CatNew extends Component {
             return (<Redirect to={'/catindex'} />);
         }
         return (
-            <>
-                <h1>Create your card!</h1>
+            <div id="background">
+            <h1>Create your card!</h1>
+            <div id="row">
+            <p className="emoji">🔥</p>
+            <div id="card">
                 <Form>
                     <FormGroup>
                         <Label for="name">
@@ -47,7 +51,7 @@ class CatNew extends Component {
                             type="text"
                             onChange={this.handleChange}
                             value={this.state.newCat.name}
-                        />
+                            />
                     </FormGroup>
                     <FormGroup>
                         <Label for="age">
@@ -59,7 +63,7 @@ class CatNew extends Component {
                             type="text"
                             onChange={this.handleChange}
                             value={this.state.newCat.age}
-                        />
+                            />
                     </FormGroup>
                     <FormGroup>
                         <Label for="enjoys">
@@ -71,7 +75,7 @@ class CatNew extends Component {
                             type="text-area"
                             onChange={this.handleChange}
                             value={this.state.newCat.enjoys}
-                        />
+                            />
                     </FormGroup>
                     <FormGroup>
                         <Label for="image">
@@ -83,13 +87,16 @@ class CatNew extends Component {
                             type="text"
                             onChange={this.handleChange}
                             value={this.state.newCat.image}
-                        />
+                            />
                     </FormGroup>
-                        <Button onClick={this.handleSubmit}>
+                        <Button id="submit" onClick={this.handleSubmit}>
                             Submit
                         </Button>
                 </Form>
-            </>
+            </div>
+            <p className="emoji">😻</p>
+            </div>
+            </div>
         )
     }
 }

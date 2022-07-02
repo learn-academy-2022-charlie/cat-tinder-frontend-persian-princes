@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap'
 import { Redirect } from 'react-router-dom'
+import './CatEdit.css'
 
 class CatEdit extends Component {
     constructor(props) {
@@ -39,8 +40,11 @@ class CatEdit extends Component {
             return (<Redirect to={`/catshow/${cat.id}`} />);
         }
         return (
-            <>
-                <h1>Update your card!</h1>
+            <div id="background">
+            <h1>Update your card!</h1>
+            <div id="row">
+            <p className="emoji">🔥</p>
+            <div id="card">
                 <Form>
                     <FormGroup>
                         <Label for="name">
@@ -86,14 +90,16 @@ class CatEdit extends Component {
                             value={this.state.updatedCat.image}
                         />
                     </FormGroup>
-                        <Button onClick={this.handleSubmit}>
+                        <Button id="submit" onClick={this.handleSubmit}>
                             Submit
                         </Button>
                 </Form>
-            </>
+            </div>
+            <p className="emoji">😻</p>
+            </div>
+            </div>
         )
     }
-    
 }
 
 export default CatEdit;

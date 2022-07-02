@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.css'
+import github from '../../assets/github.svg'
 
 class Footer extends Component {
     render() {
@@ -7,19 +8,18 @@ class Footer extends Component {
             <div id="footer-container">
                 <ul className='social-media'>
                     <li>Logan</li>
-                    <li><a className="footer-link" href=''>Social Media Icon</a></li>
-                    <li><a className="footer-link" href=''>Social Media Icon</a></li>
-                    <li><a className="footer-link" href=''>Social Media Icon</a></li>
+                    <a href="https://github.com/Renzlawr" target="_blank"><img src={github}/></a>
                 </ul>
-                <p>© Copyright Logan and Jenner</p>
+                <div id="cr">
+                    <p>© Copyright</p>
+                    <p>Logan and Jenner</p>
+                </div>
                 <ul className='social-media'>
                     <li>Jenner</li>
-                    <li><a className="footer-link" href=''>Social Media Icon</a></li>
-                    <li><a className="footer-link" href=''>Social Media Icon</a></li>
-                    <li><a className="footer-link" href=''>Social Media Icon</a></li>
+                    <a href="https://github.com/jennerdulce" target="_blank"><img src={github}/></a>
                 </ul>
             </div>
-        );
+        )
     }
 }
 
