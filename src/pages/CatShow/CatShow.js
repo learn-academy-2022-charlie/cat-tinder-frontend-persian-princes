@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button } from 'reactstrap';
 import { NavLink, Redirect } from 'react-router-dom'
-
-
+import './CatShow.css'
 
 class Show extends Component {
     constructor(props) {
@@ -24,22 +23,25 @@ class Show extends Component {
         }
         const { cat } = this.props
         return (
-            <div>
-                <h1>Cat Show</h1>
+            <div id="cat-card">
                 {cat && 
-                    <Card>
-                        <CardImg top width="100%" src={cat.image} alt="Card image cap" />
-                        <CardBody>
-                        <CardTitle>{cat.name}</CardTitle>
-                        <CardSubtitle>{cat.age}</CardSubtitle>
-                        <CardText>{cat.enjoys}</CardText>
+                    <Card id="cat-show-card">
+                        <CardImg id="card-cat" src={cat.image} alt="Card image cap" />
+                        <CardBody id="card-body">
+                            <div id="name-age">
+                                <CardTitle id="card-title">{`${cat.name}`}</CardTitle>
+                                <CardSubtitle id="card-subtitle">{`${cat.age}`}</CardSubtitle>
+                            </div>
+                        <CardText id="card-text">Enjoys: <br />{`${cat.enjoys}`}</CardText>
                         </CardBody>
                     </Card>
                 }
-                <NavLink to={`/catedit/${cat.id}`}>Update Cat</NavLink>
-                    <button onClick={this.handleDelete} >
+                <div id="button-container">
+                    <NavLink id="update-button" to={`/catedit/${cat.id}`}>Update Cat</NavLink>
+                    <button id="delete-button" onClick={this.handleDelete} >
                         Delete Cat
                     </button>
+                </div>
             </div>
         );
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import cat from '../../assets/cat-cry.jpeg'
 import './NotFound.css'
 
 class NotFound extends Component {
@@ -7,10 +7,7 @@ class NotFound extends Component {
         return (
             <div id='not-found-container'>
                 <h1>404: Not Found</h1>
-                <img src='' alt='' />
-                <Link to='/'>
-                    <p>Home</p>
-                </Link>
+                <img src={cat} alt='' />
             </div>
         )
     }
