@@ -17,6 +17,10 @@ const from = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 const trans = (r, s) =>
   `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
+const hello = () => {
+  console.log('hello')
+}
+
 function Deck(props) {
   const cards = props.cats
   console.log(props.cats)
@@ -58,6 +62,7 @@ function Deck(props) {
           {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
           <animated.div
             {...bind(i)}
+            onDoubleClick={hello}
             style={{
               transform: interpolate([rot, scale], trans),
               backgroundImage: `url(${cards[i].image})`,
