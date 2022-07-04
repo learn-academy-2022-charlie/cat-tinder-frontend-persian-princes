@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './AboutUs.css'
 import bentley from '../../assets/bentley.jpg'
+import ember from '../../assets/ember.jpg'
 
 class AboutUs extends Component {
     render() {
@@ -13,7 +14,7 @@ class AboutUs extends Component {
                 </div>
                 <div className='person-container'>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <img className="profile-image" src={bentley} alt="image of logan"></img>
+                    <img className="profile-image" src={ember} alt="image of logan"></img>
                 </div>
             </div>
         );

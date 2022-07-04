@@ -1,4 +1,39 @@
-#cat-card {
-    height: 40px;
-    width: 40px
+#info-button {
+    background: linear-gradient(48deg, rgba(255,0,69,1) 0%, rgba(74,0,184,1) 100%);
+    height: 1em;
+    width: 15%;
+    border-radius: 25px;
+    padding: 1.4%;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+
+#card-body-index {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background: black !important;
+    color: white;
+    border: none;
+}
+
+.card-title {
+    font-size: 4em;
+}
+
+#card-image {
+    height: auto;
+    width: 20em;
+    margin-bottom: 2em;
+}
+
+#index-card {
+    border: none;
 }
