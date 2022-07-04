@@ -1,0 +1,28 @@
+#about-us {
+    background-color: black;
+    height: 100%;
+    color: white
+}
+
+#about-us > div > h1 {
+    text-align: center;
+    margin: auto;
+    color: white;
+    font-size: 10em;
+    color: white
+}
+
+.person-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.person-container > p {
+    width: 100em
+}
+
+.profile-image {
+    display: block;
+    height: 30em
+}
