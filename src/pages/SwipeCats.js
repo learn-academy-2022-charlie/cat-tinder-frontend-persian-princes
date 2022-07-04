@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Deck from '../components/Deck'
+import Deck from '../components/Deck/Deck.js'
 import styles from './styles.module.css'
 
 export default function App(props) {

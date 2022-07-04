@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useSprings, animated, to as interpolate } from '@react-spring/web'
-import {Modal, Button} from 'react-bootstrap'
 import { useDrag } from 'react-use-gesture'
-import ModalComponent from './ModalComponent'
-import styles from './styles.module.css'
-import './styles.module.css'
+import ModalComponent from '../Modal/ModalComponent'
+import Card from '../Card/Card.js'
+import styles from '../Modal/styles.module.css'
+import '../Modal/styles.module.css'
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i) => ({
@@ -75,16 +75,16 @@ function Deck(props) {
     <div className={styles.wrapper}>
       
       {zz.map(({ x, y, rot, scale }, i) => (
-        <animated.div className={styles.deck} key={i} style={{ x, y }}>
-          <animated.div
-            {...bind(i)}
-            onDoubleClick={() => handleShow(cards[i])}
-            style={{
-              transform: interpolate([rot, scale], trans),
-              backgroundImage: `url(${cards[i].image})`,
-            }}
-          />
-        </animated.div>
+        <Card 
+        i={i}
+        x={x}
+        y={y}
+        rot={rot}
+        scale={scale}
+        trans={trans}
+        cat={cards[i]}
+        bind={bind}
+        />
       ))}
     </div>
   )
