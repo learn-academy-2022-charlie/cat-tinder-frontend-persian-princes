@@ -13,15 +13,17 @@ function ModalComponent(props) {
           centered
         >
           <Modal.Body id="modal-container">
-            <img id="modal-image" src={props.cat.image}></img>
-            <h4 id="modal-info"><span>{props.cat.name}</span>, {props.cat.age}</h4>
-            <p id="modal-enjoys">
-              {props.cat.enjoys}
-            </p>
+            <div>
+              <img id="modal-image" src={props.cat.image}></img>
+              <div id="modal-info-container">
+                <h4 id="modal-info"><span>{props.cat.name}</span>, {props.cat.age}</h4>
+                <p id="modal-enjoys">
+                  {props.cat.enjoys}
+                </p>
+                <Button id="modal-close" onClick={props.onHide}>Close</Button>
+              </div>
+            </div>
           </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={props.onHide}>Close</Button>
-          </Modal.Footer>
         </Modal>
       );
 }
