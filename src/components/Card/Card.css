@@ -1,12 +1,42 @@
 #modal-image {
     display: block;
-    height: 400px;
-    margin: auto;
+    height: auto;
+    width: 29em;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
 }
   
 #modal-info {
-margin-top: 1em
+
 }
 
 #modal-enjoys {
+}
+
+#modal-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.modal-content {
+    background-color: transparent !important;
+    color: white;
+    border: 0 !important;
+}
+
+#modal-info-container {
+    background: linear-gradient(202deg, rgba(255,0,69,1) 0%, rgba(74,0,184,1) 100%);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 1em 1em 3em 1em;
+    width: 29em;
+}
+
+#modal-close {
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+    background-color: black;
+    border: none;
 }
