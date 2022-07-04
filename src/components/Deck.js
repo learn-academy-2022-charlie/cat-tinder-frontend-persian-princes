@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { useSprings, animated, to as interpolate } from '@react-spring/web'
+import {Modal, Button} from 'react-bootstrap'
 import { useDrag } from 'react-use-gesture'
-
+import ModalComponent from './ModalComponent'
 import styles from './styles.module.css'
+import './styles.module.css'
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i) => ({
@@ -17,13 +19,27 @@ const from = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 const trans = (r, s) =>
   `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
-const hello = () => {
-  console.log('hello')
-}
-
 function Deck(props) {
+  // MODAL
+  const [modalShow, setModalShow] = React.useState(false);
+  const handleShow = (cat) => {
+    setModalShow(true)
+    displayModal(cat)
+  }
+
+  const displayModal = (cat) => {
+    return (
+      <ModalComponent
+        cat={cat}
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      >
+      </ModalComponent>
+    );
+  }
+
+  // CARDS
   const cards = props.cats
-  console.log(props.cats)
   const [gone] = useState(() => new Set()) // The set flags all the cards that are flicked out
   const [zz, api] = useSprings(cards.length, i => ({
     ...to(i),
@@ -56,13 +72,13 @@ function Deck(props) {
   })
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
   return (
-    <>
+    <div className={styles.wrapper}>
+      
       {zz.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
-          {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
           <animated.div
             {...bind(i)}
-            onDoubleClick={hello}
+            onDoubleClick={() => handleShow(cards[i])}
             style={{
               transform: interpolate([rot, scale], trans),
               backgroundImage: `url(${cards[i].image})`,
@@ -70,7 +86,7 @@ function Deck(props) {
           />
         </animated.div>
       ))}
-    </>
+    </div>
   )
 }
 

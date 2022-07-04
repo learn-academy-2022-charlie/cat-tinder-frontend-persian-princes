@@ -7,7 +7,7 @@ class Header extends Component {
         return (
             <div id="header-container">
                 <ul id="header-content">
-                    <NavLink className="header-link" to="/notfound">
+                    <NavLink className="header-link" to="/deck">
                         <li>Find Your Meowtch</li>
                     </NavLink>
                     <NavLink className="header-link" to="/catindex">
@@ -19,7 +19,7 @@ class Header extends Component {
                     <NavLink className="header-link" to="/catnew">  
                         <li>Add Your Cat!</li>
                     </NavLink>
-                    <NavLink className="header-link" to="/notfound">  
+                    <NavLink className="header-link" to="/aboutus">  
                         <li>About Us</li>
                     </NavLink>
                 </ul>

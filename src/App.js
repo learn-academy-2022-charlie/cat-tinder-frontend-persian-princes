@@ -7,6 +7,7 @@ import CatIndex from './pages/CatIndex/CatIndex.js'
 import CatShow from './pages/CatShow/CatShow.js'
 import CatNew from './pages/CatNew/CatNew.js'
 import CatEdit from './pages/CatEdit/CatEdit.js'
+import AboutUs from './pages/AboutUs/AboutUs.js'
 import SwipeCats from './pages/SwipeCats.js'
 import NotFound from './pages/NotFound/NotFound.js'
 
@@ -99,6 +100,11 @@ class App extends Component {
             <Route path="/deck"
             render={(props) => {
               return <SwipeCats cats={this.state.listOfCats}/>
+            }}
+            />
+            <Route path="/aboutus" 
+            render={() => {
+              return <AboutUs />
             }}
             />
             <Route component={NotFound}/>
