@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Cat Tinder Backend Repo](https://github.com/learn-academy-2022-charlie/cat-tinder-backend-persian-princes).
 
 ## Available Scripts
 
